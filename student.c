@@ -7,7 +7,7 @@ struct student{
     char name[50];
     int ID;
     struct dateofbirth DOB;
-    float score;
+    int score;
 }s;
 int main()
 {
@@ -20,13 +20,13 @@ int main()
     printf("Enter Date of Birth in [D M Y] format: ");
     scanf("%d%d%d",&s.DOB.day,&s.DOB.month,&s.DOB.year);
     printf("score\n");
-    scanf("%f",&s.score);
+    scanf("%d",&s.score);
     printf("Displaying Information:\n");
     printf("Name: ");
     printf("%s", s.name);
     printf("ID: %d\n", s.ID);
     printf(" Date of birth : %02d/%02d/%02d: %d\n", s.DOB.day,s.DOB.month,s.DOB.year);
-    printf("score:  %.1f\n", s.score);
+    printf("score:  %d\n", s.score);
 
     return 0;
 }
