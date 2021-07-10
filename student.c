@@ -1,9 +1,4 @@
 
-//يارا محمود احمد على          Sec:4   BN:45
-//منة الله جمال عيد               Sec:4    BN:24
-//حياة جمال عبد الهادى         Sec:2    BN:4
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
