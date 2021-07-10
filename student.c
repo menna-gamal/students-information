@@ -12,7 +12,7 @@ struct dateofbirth{
 <<<<<<< HEAD
 }std;
 
-
+//menna gamal
  void readinfo (int  index,std *studentInformation );
 
 int main()
@@ -128,7 +128,7 @@ int main()
 void readinfo (int index , std *studentInformation){
     char temp;
     printf("name of student %d: \n ",(index+1));
-    scanf("%c",&temp);   //to avoid compiler to store either enter or null into the string’s first character and string input terminates.
+    scanf("%c",&temp);   //to avoid compiler to store either enter or null into the stringâ€™s first character and string input terminates.
     //scanf("%[^\n]",&studentInformation->name);
     fgets(studentInformation->name , sizeof(studentInformation->name),stdin);
     printf("ID :\n");
