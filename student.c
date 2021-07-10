@@ -19,7 +19,6 @@ struct node {
 }*head ,*tail,*pre ,*aft,*studentX;
 
 void createList(int n);
-void traverseList();
 
  void readinfo (int  index,std *studentInformation );
 
@@ -57,8 +56,8 @@ int main()
     scanf("%d",&ins);
 
     if (ins==1){
-            allStudents=realloc(allStudents,num+1);
-              finalNumber=num+1;
+            finalNumber += 1;
+            allStudents=realloc(allStudents,finalNumber);
 
              printf("Enter place that you want to insert in : ");
              scanf("%d",&ins_place);
@@ -67,12 +66,12 @@ int main()
                   fprintf(stderr,"Array not allocated!");
                   return 1;
               }
-            if (ins_place<=num){
+            if (ins_place<=finalNumber){
             if(ins_place == 1){
                     clock_t t;
             t = clock();
 
-            for(int i=num; i>0;i--){
+            for(int i=finalNumber-1; i>0;i--){
                     allStudents[i]=allStudents[i-1];
                 }
                    readinfo (0,&allStudents[0]);
@@ -80,11 +79,11 @@ int main()
                    double time_taken = ((double)t)/CLOCKS_PER_SEC;
             printf("Insertion took %f seconds to execute\n",time_taken);
             }
-              else if(ins_place == num+1 ){
+              else if(ins_place == finalNumber ){
                   clock_t t;
             t = clock();
             finalNumber=num+1;
-             readinfo (num,&allStudents[num]);
+             readinfo (finalNumber -1,&allStudents[finalNumber -1]);
                  t = clock() -t;
                    double time_taken = ((double)t)/CLOCKS_PER_SEC;
             printf("Insertion took %f seconds to execute\n",time_taken);
@@ -93,7 +92,7 @@ int main()
             {
                  clock_t t;
             t = clock();
-                 for(int i=num; i >=ins_place ;i--){
+                 for(int i=finalNumber-1; i >=ins_place ;i--){
                     allStudents[i]=allStudents[i-1];
                 }
                 readinfo (ins_place-1,&allStudents[ins_place-1]);
