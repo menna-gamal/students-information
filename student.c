@@ -19,7 +19,6 @@ struct node {
 }*head ,*tail,*pre ,*aft,*studentX;
 
 void createList(int n);
-void traverseList();
 
 int main()
 {
